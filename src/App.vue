@@ -1,9 +1,11 @@
 <script>
-import AppHeader from './components/AppHeader.vue'
+import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
 export default {
     name: 'DC Vite App',
     components: {
-        AppHeader
+        AppHeader,
+        AppMain
     }
 }
 </script>
@@ -11,6 +13,7 @@ export default {
 <template>
     <div class="container">
         <AppHeader />
+        <AppMain />
         <!-- Main WIP -->
     </div>
 </template>
