@@ -6,11 +6,7 @@ export default {
 
 <template>
     <main>
-        <div class="container">
-
-
-            Content goes here
-        </div>
+        <div class="container">Content goes here</div>
     </main>
 </template>
 

@@ -2,12 +2,14 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
+import AppNav from './components/AppNav.vue';
 export default {
     name: 'DC Vite App',
     components: {
         AppHeader,
         AppMain,
-        AppFooter
+        AppFooter,
+        AppNav
     }
 }
 </script>
@@ -15,6 +17,7 @@ export default {
 <template>
     <AppHeader />
     <AppMain />
+    <AppNav />
     <AppFooter />
 </template>
 
