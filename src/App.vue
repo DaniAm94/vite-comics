@@ -1,21 +1,22 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
+import AppFooter from './components/AppFooter.vue';
 export default {
     name: 'DC Vite App',
     components: {
         AppHeader,
-        AppMain
+        AppMain,
+        AppFooter
     }
 }
 </script>
 
 <template>
-    <div class="container">
-        <AppHeader />
-        <AppMain />
-        <!-- Footer WIP -->
-    </div>
+    <AppHeader />
+    <AppMain />
+    <AppFooter />
+    <!-- Footer WIP -->
 </template>
 
 <style>
@@ -33,9 +34,18 @@ img {
     display: block;
 }
 
+ul {
+    list-style-type: none;
+
+}
+
+a {
+    text-decoration: none;
+}
+
 /* Utils */
 .container {
-    max-width: 1080px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 </style>

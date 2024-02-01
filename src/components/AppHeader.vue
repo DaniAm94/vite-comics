@@ -80,13 +80,11 @@ header figure {
 }
 
 ul {
-    list-style-type: none;
     display: flex;
     column-gap: 1rem;
 }
 
 header a {
-    text-decoration: none;
     color: black;
     font-weight: bold;
     text-transform: uppercase;
