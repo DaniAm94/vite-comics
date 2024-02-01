@@ -11,6 +11,7 @@ export default {
 <template>
     <div class="container">
         <AppHeader />
+        <!-- Main WIP -->
     </div>
 </template>
 
