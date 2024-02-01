@@ -14,7 +14,7 @@ export default {
     <div class="container">
         <AppHeader />
         <AppMain />
-        <!-- Main WIP -->
+        <!-- Footer WIP -->
     </div>
 </template>
 
