@@ -236,15 +236,12 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/scss/colors' as *;
-
+@use '../assets/scss/mixins' as *;
 
 /* Footer generics */
 footer {
     .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
+        @include flex('', 'between', )
     }
 
     a {
@@ -276,8 +273,7 @@ footer {
     }
 
     ul {
-        display: flex;
-        flex-direction: column;
+        @include flex('column', 'start', 'start');
         row-gap: 0.3rem;
     }
 
@@ -299,8 +295,7 @@ footer {
     padding: 2rem 0;
 
     ul {
-        display: flex;
-        align-items: center;
+        @include flex('', 'start');
         column-gap: 1rem;
     }
 

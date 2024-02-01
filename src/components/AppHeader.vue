@@ -93,15 +93,14 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/scss/colors' as *;
+@use '../assets/scss/mixins' as *;
 
 header {
     height: 130px;
     color: white;
 
     .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex('', 'between');
     }
 
     figure {

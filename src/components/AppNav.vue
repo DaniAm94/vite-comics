@@ -53,6 +53,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/scss/colors' as *;
+@use '../assets/scss/mixins' as *;
 
 #navigation {
     background-color: $dc-blue;
@@ -63,14 +64,11 @@ export default {
     }
 
     ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex('', 'between');
     }
 
     a {
-        display: flex;
-        align-items: center;
+        @include flex();
         color: white;
         column-gap: 1rem;
         text-transform: uppercase;
