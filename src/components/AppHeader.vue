@@ -54,8 +54,21 @@ export default {
                 url: '#',
                 current: false,
             },
-        ]
-    })
+        ],
+        activeLinkText: 'Comics'
+    }),
+    methods: {
+        /**
+         * it change the current active link whether it's different from the clicked link
+         * @param {object} clickedLink the clicked link
+         */
+        setActiveLink(clickedLink) {
+            this.links.forEach(link => {
+                if (link.current) link.current = false;
+                if (clickedLink.text === link.text) link.current = true;
+            })
+        }
+    }
 
 }
 </script>
@@ -68,7 +81,7 @@ export default {
             <nav>
                 <ul>
                     <li v-for="(link, i) in links" :key="i">
-                        <a href="#">
+                        <a @click="setActiveLink(link)" href="#" :class="{ active: link.current }">
                             {{ link.text }}
                         </a>
                     </li>
@@ -80,8 +93,7 @@ export default {
 
 <style scoped>
 header {
-    min-height: 100px;
-    padding: 20px 0;
+    height: 130px;
     color: white;
 }
 
@@ -105,10 +117,26 @@ header a {
     color: black;
     font-weight: bold;
     text-transform: uppercase;
+    display: block;
+    line-height: 130px;
+    height: 130px;
 }
 
 header a:hover,
 header a.active {
     color: hsl(218.76deg 90.82% 61.57%);
+    position: relative;
+}
+
+header a:hover::after,
+
+header a.active::after {
+    content: '';
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: hsl(218.76deg 90.82% 61.57%);
 }
 </style>
