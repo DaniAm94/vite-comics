@@ -51,32 +51,40 @@ export default {
     </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../assets/scss/colors' as *;
+
 #navigation {
-    background-color: hsl(218.76deg 90.82% 61.57%);
+    background-color: $dc-blue;
     padding: 40px 0;
+
+    nav {
+        padding: 0 50px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        color: white;
+        column-gap: 1rem;
+        text-transform: uppercase;
+    }
 }
 
-#navigation nav {
-    padding: 0 50px;
-}
 
 img.icon {
+    height: 50px;
+    width: auto;
+}
+
+li:last-of-type img.icon {
     width: 50px;
     height: auto;
-}
-
-#navigation ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#navigation a {
-    display: flex;
-    align-items: center;
-    color: white;
-    column-gap: 1rem;
-    text-transform: uppercase;
 }
 </style>

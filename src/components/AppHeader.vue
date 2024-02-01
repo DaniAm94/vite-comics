@@ -92,51 +92,54 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/colors' as *;
+
 header {
     height: 130px;
     color: white;
-}
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-header figure {
-    height: 90px;
-    width: 90px;
-}
+    figure {
+        height: 90px;
+        width: 90px;
+    }
 
-ul {
-    display: flex;
-    column-gap: 1rem;
-}
+    ul {
+        display: flex;
+        column-gap: 1rem;
+    }
 
-header a {
-    color: black;
-    font-weight: bold;
-    text-transform: uppercase;
-    display: block;
-    line-height: 130px;
-    height: 130px;
-}
+    a {
+        color: black;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: block;
+        line-height: 130px;
+        height: 130px;
+    }
 
-header a:hover,
-header a.active {
-    color: hsl(218.76deg 90.82% 61.57%);
-    position: relative;
-}
+    a:hover,
+    a.active {
+        color: $dc-blue;
+        position: relative;
+    }
 
-header a:hover::after,
+    a:hover::after,
 
-header a.active::after {
-    content: '';
-    height: 4px;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-color: hsl(218.76deg 90.82% 61.57%);
+    a.active::after {
+        content: '';
+        height: 4px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: $dc-blue;
+    }
+
 }
 </style>

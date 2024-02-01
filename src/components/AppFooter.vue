@@ -210,7 +210,7 @@ export default {
                     </div>
                 </nav>
                 <figure>
-                    <img src="../assets/img/dc-logo-bg.png" alt="">
+                    <img src="../assets/img/dc-logo-bg.png" alt="big dc logo">
                 </figure>
             </div>
         </div>
@@ -224,7 +224,7 @@ export default {
                         </li>
                         <li v-for="social in socials" :key="social">
                             <a href="#">
-                                <img :src="createImagePath(social)" alt="facebook logo">
+                                <img :src="createImagePath(social)" :alt="social.text">
                             </a>
                         </li>
                     </ul>
@@ -234,75 +234,86 @@ export default {
     </footer>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../assets/scss/colors' as *;
+
+
+/* Footer generics */
+footer {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    a {
+        color: hsl(70.59deg 7.91% 42.16%);
+    }
+}
+
+/* Top Footer */
 .footer-top {
     background-image: url('../assets/img/footer-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+
+    .container {
+        height: 500px;
+        overflow: hidden;
+    }
+
+    .row {
+        display: flex;
+        flex-basis: calc(100% / 3);
+        column-gap: 1rem;
+    }
+
+    h3 {
+        color: white;
+        text-transform: uppercase;
+        margin: 1rem 0;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.3rem;
+    }
+
+
+
+    img {
+        width: 600px;
+        height: auto;
+    }
+
 }
 
-.footer-top .container,
-.footer-bottom .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-}
-
-.footer-top .container {
-    height: 500px;
-    overflow: hidden;
-}
-
-.footer-top .row {
-    display: flex;
-    flex-basis: calc(100% / 3);
-    column-gap: 1rem;
-}
-
-.footer-top h3 {
-    color: white;
-    text-transform: uppercase;
-    margin: 1rem 0;
-}
-
-.footer-top ul {
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.3rem;
-}
-
-footer a {
-    color: hsl(70.59deg 7.91% 42.16%);
-}
-
-.footer-top img {
-    width: 600px;
-    height: auto;
-}
 
 /* Bottom Footer */
 
 .footer-bottom {
-    background-color: hsl(0deg 0% 18.82%);
+    background-color: $dc-dark-grey;
     padding: 2rem 0;
+
+    ul {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+    }
+
+    h3 {
+        color: $dc-blue;
+        text-transform: uppercase;
+    }
 }
 
 #register-btn {
     padding: 15px;
-    border: 2px solid hsl(218.76deg 90.82% 61.57%);
+    border: 2px solid $dc-blue;
     text-transform: uppercase;
     color: white;
-}
-
-.footer-bottom ul {
-    display: flex;
-    align-items: center;
-    column-gap: 1rem;
-}
-
-.footer-bottom h3 {
-    color: hsl(218.76deg 90.82% 61.57%);
-    text-transform: uppercase;
 }
 </style>
