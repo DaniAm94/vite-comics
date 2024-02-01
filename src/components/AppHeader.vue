@@ -1,11 +1,13 @@
 <script>
 export default {
-    name: 'DC Vite App'
+    name: 'App Header'
 }
 </script>
 
 <template>
-    <!-- Header WIP -->
+    <!--Html-->
 </template>
 
-<style></style>
+<style>
+/*Css*/
+</style>
