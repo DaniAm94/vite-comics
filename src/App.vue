@@ -16,7 +16,6 @@ export default {
     <AppHeader />
     <AppMain />
     <AppFooter />
-    <!-- Footer WIP -->
 </template>
 
 <style>

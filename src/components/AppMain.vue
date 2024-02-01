@@ -6,10 +6,15 @@ export default {
 
 <template>
     <main>
-        --> Content goes here <---- </main>
+        <div class="container">
+
+
+            Content goes here
+        </div>
+    </main>
 </template>
 
-<style>
+<style scoped>
 main {
     background-color: hsl(0deg 0% 10.98%);
     height: 100px;

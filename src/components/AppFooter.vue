@@ -298,6 +298,7 @@ footer a {
 .footer-bottom ul {
     display: flex;
     align-items: center;
+    column-gap: 1rem;
 }
 
 .footer-bottom h3 {
