@@ -47,4 +47,8 @@ a {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+body {
+    font-family: 'Open Sans Variable', sans-serif;
+}
 </style>
