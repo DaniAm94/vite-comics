@@ -2,6 +2,7 @@
 import { products } from './assets/data';
 
 import AppHeader from './components/AppHeader.vue';
+import AppJumbotron from './components/AppJumbotron.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
 import AppNav from './components/AppNav.vue';
@@ -11,7 +12,8 @@ export default {
         AppHeader,
         AppMain,
         AppFooter,
-        AppNav
+        AppNav,
+        AppJumbotron
     },
     data: () => ({
         products
@@ -21,8 +23,9 @@ export default {
 
 <template>
     <AppHeader />
-    <AppMain :products="products" />
+    <AppJumbotron />
     <!-- Jumbotron WIP -->
+    <AppMain :products="products" />
     <AppNav />
     <AppFooter />
 </template>
