@@ -1,5 +1,5 @@
 <script>
-import { products } from './assets/data';
+import { products, headerLinks, navLinks, footerIcons, linksGroups } from './assets/data';
 
 import AppHeader from './components/AppHeader.vue';
 import AppJumbotron from './components/AppJumbotron.vue';
@@ -16,18 +16,22 @@ export default {
         AppJumbotron
     },
     data: () => ({
-        products
+        products,
+        headerLinks,
+        navLinks,
+        footerIcons,
+        linksGroups
     })
 }
 </script>
 
 <template>
-    <AppHeader />
+    <AppHeader :links="headerLinks" />
     <AppJumbotron />
     <!-- Jumbotron WIP -->
     <AppMain :products="products" />
-    <AppNav />
-    <AppFooter />
+    <AppNav :links="navLinks" />
+    <AppFooter :icons="footerIcons" :links-groups="linksGroups" />
 </template>
 
 <style lang="scss">

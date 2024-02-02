@@ -1,30 +1,9 @@
 <script>
 export default {
     name: 'App Nav',
-    data: () => ({
-        links: [
-            {
-                icon: 'buy-comics-digital-comics.png',
-                text: 'Digital Comics'
-            },
-            {
-                icon: 'buy-comics-merchandise.png',
-                text: 'DC Merchandise'
-            },
-            {
-                icon: 'buy-comics-subscriptions.png',
-                text: 'Subscription'
-            },
-            {
-                icon: 'buy-comics-shop-locator.png',
-                text: 'Comic Shop Locator'
-            },
-            {
-                icon: 'buy-dc-power-visa.svg',
-                text: 'Digital Comics'
-            }
-        ]
-    }),
+    props: {
+        links: Array
+    },
     methods: {
         createImagePath(img) {
             const url = new URL(`../assets/img/${img}`, import.meta.url);
