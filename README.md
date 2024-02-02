@@ -13,3 +13,13 @@
 ### `Bonus:`
 - Creare un componente aggiuntivo per gestire la fascia azzurra con le icone.
 - Importare il font utilizzando Fontsource
+
+# PARTE 2
+
+### Descrizione:
+    Continuate a lavorare nella stessa repo di ieri e create un nuovo componente che rappresenterà le card dei fumetti.
+    Utilizzate i dati presenti nel file  che trovate in allegato e passateli al componente Card tramite props.
+    Una volta inseriti tutti i contenuti dinamicamente, completate il vostro layout e rifinite i dettagli con Sass.
+### `Possibili Bonus:`
+- Aggiungere il jumbotron
+- Organizzare i dati creando un barrel da importare in App.vue
