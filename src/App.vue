@@ -22,7 +22,7 @@ export default {
 <template>
     <AppHeader />
     <AppMain :products="products" />
-    <!-- AppMain updating -->
+    <!-- Jumbotron WIP -->
     <AppNav />
     <AppFooter />
 </template>
