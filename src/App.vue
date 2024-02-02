@@ -17,6 +17,7 @@ export default {
 <template>
     <AppHeader />
     <AppMain />
+    <!-- AppMain updating -->
     <AppNav />
     <AppFooter />
 </template>
