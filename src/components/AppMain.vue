@@ -1,20 +1,62 @@
 <script>
+import ProductCard from './products/ProductCard.vue';
 export default {
-    name: 'App Main'
+    name: 'App Main',
+    props: {
+        products: Array
+    },
+    components: {
+        ProductCard,
+    }
 }
 </script>
 
 <template>
     <main>
-        <div class="container">Content goes here</div>
+        <section id="products">
+            <div class="container">
+                <h2>Current Series</h2>
+                <div class="card-container">
+                    <ProductCard v-for="product in products" :key="product.series" :thumb="product.thumb"
+                        :series="product.series" />
+                </div>
+            </div>
+        </section>
     </main>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../assets/scss/colors' as*;
+
 main {
-    background-color: hsl(0deg 0% 10.98%);
-    height: 100px;
+    background-color: $dc-black;
+    min-height: 100px;
     color: white;
-    font-size: 3rem;
+    padding: 50px 0;
+
+    .container {
+        position: relative;
+    }
+
+    #products h2 {
+        background-color: $dc-blue;
+        width: auto;
+        padding: 5px 15px;
+        position: absolute;
+        top: -70px;
+        left: 0;
+
+    }
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 2rem;
+        margin: 0 -10px;
+    }
+
+    .prod-card {
+        flex-basis: calc(100% / 6);
+    }
 }
 </style>

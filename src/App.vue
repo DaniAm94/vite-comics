@@ -1,4 +1,6 @@
 <script>
+import { products } from './assets/data';
+
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
@@ -10,13 +12,16 @@ export default {
         AppMain,
         AppFooter,
         AppNav
-    }
+    },
+    data: () => ({
+        products
+    })
 }
 </script>
 
 <template>
     <AppHeader />
-    <AppMain />
+    <AppMain :products="products" />
     <!-- AppMain updating -->
     <AppNav />
     <AppFooter />
