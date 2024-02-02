@@ -20,6 +20,7 @@ export default {
                     <ProductCard v-for="product in products" :key="product.series" :thumb="product.thumb"
                         :series="product.series" />
                 </div>
+                <button role="button" id="load-btn">Load More</button>
             </div>
         </section>
     </main>
@@ -58,5 +59,17 @@ main {
     .prod-card {
         flex-basis: calc(100% / 6);
     }
+}
+
+#load-btn {
+    color: white;
+    background-color: $dc-blue;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 30px;
+    margin: 10px auto;
+    display: block;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 </style>
